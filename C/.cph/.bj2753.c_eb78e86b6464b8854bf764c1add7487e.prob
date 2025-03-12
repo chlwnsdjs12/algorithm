@@ -1,0 +1,1 @@
+{"name":"Local: bj2753","url":"c:\\Users\\User\\Desktop\\code\\C\\bj2753.c","tests":[{"id":1704852569689,"input":"2000","output":"1"},{"id":1704852574091,"input":"1999","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\User\\Desktop\\code\\C\\bj2753.c","group":"local","local":true}
