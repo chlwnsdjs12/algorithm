@@ -8,12 +8,11 @@ using namespace std;
 
 struct Fibo
 {
-    vector<int> sum_0;
-    vector<int> sum_1;
+    int sum_0, sum_1;
 
-    void print(int n)
+    void print()
     {
-        cout << sum_0[n] << " " << sum_1[n] << "\n";
+        cout << sum_0 << " " << sum_1 << "\n";
     }
 };
 
@@ -26,25 +25,22 @@ int main()
     int t, n;
     cin >> t;
 
-    vector<int> fibo_arr(41);
+    vector<Fibo> fibo_arr(41);
     
-    fibo_arr[0] = 0;
-    fibo_arr[1] = 1;
-    fibo.sum_0.push_back(1);
-    fibo.sum_1.push_back(0);
-    fibo.sum_0.push_back(0);
-    fibo.sum_1.push_back(1);
+    fibo_arr[0].sum_0 = 1;
+    fibo_arr[0].sum_1 = 0;
+    fibo_arr[1].sum_0 = 0;
+    fibo_arr[1].sum_1 = 1;
 
     for(int i=2; i<=40; i++)
     {
-        fibo_arr[i] = fibo_arr[i-1] + fibo_arr[i-2];
-        fibo.sum_0.push_back(fibo.sum_0[i-1] + fibo.sum_0[i-2]);
-        fibo.sum_1.push_back(fibo.sum_1[i-1] + fibo.sum_1[i-2]);
+        fibo_arr[i].sum_0 = fibo_arr[i-1].sum_0 + fibo_arr[i-2].sum_0;
+        fibo_arr[i].sum_1 = fibo_arr[i-1].sum_1 + fibo_arr[i-2].sum_1;
     }
 
     for(int i=0; i<t; i++)
     {
         cin >> n;
-        fibo.print(n);       
+        fibo_arr[n].print();
     }
 }
