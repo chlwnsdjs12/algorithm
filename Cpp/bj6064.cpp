@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unordered_map>
 #include <vector>
 
 using namespace std;
@@ -9,12 +8,14 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    vector<int> arr;
-    
-    arr.push_back(0);
+    int testcase;
+    cin >> testcase;
 
-    for(int i=0; i<arr.size(); i++)
+    for(int t=0; t<testcase; t++)
     {
-        cout << arr[i] << " ";
+        int m, n, x, y;
+        cin >> m >> n >> x >> y;
+        
+        
     }
 }
